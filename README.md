@@ -5,7 +5,7 @@
 **Actor page:** [apify.com/johnvc/xing-profile-api](https://apify.com/johnvc/xing-profile-api?fpr=9n7kx3)
 **Input schema:** [apify.com/johnvc/xing-profile-api/input-schema](https://apify.com/johnvc/xing-profile-api/input-schema?fpr=9n7kx3)
 
-This repo is a working example of the Xing API on Apify. You pass a list of member profile URLs (a bare handle such as `Jane_Doe` works too) and each profile comes back as one JSON row: identity, current role, city and country, listed skills in German and English, spoken languages, employment history, education, groups, and interests. Xing is the professional network of the German-speaking world, so it holds people who are not on the global networks, which makes it a distinct source for DACH recruiting and market research rather than a substitute. There is no discovery endpoint, so this API reads profiles you already hold URLs for; it does not search for people by title, company, or city.
+This repo is a working example of the Xing API on Apify. You pass a list of member profile URLs (a bare handle such as `Jane_Doe` works too) and each profile comes back as one JSON row holding whatever that member published: identity, current role, city and country, listed skills in German and English, spoken languages, employment history, education, groups, and interests. Xing is the professional network of the German-speaking world, so it holds people who are not on the global networks, which makes it a distinct source for DACH recruiting and market research rather than a substitute. There is no discovery endpoint, so this API reads profiles you already hold URLs for; it does not search for people by title, company, or city.
 
 ## Video Walkthrough
 
@@ -13,7 +13,7 @@ This repo is a working example of the Xing API on Apify. You pass a list of memb
 
 ### Text walkthrough
 
-The Xing API takes exactly one input, `profileUrls`, an array of up to 1000 member profile URLs or bare handles per run. Every entry returns a row whose `result_type` is `profile`, carrying `fullName`, `jobTitle`, `city`, `countryCode`, `membership`, `skills`, `languages`, `experience`, `education`, `groups`, `interests`, and a one-line `summary` an agent can read without post-processing. An input that cannot be collected returns a row with `result_type` of `error` and a plain-language `error_message`, so nothing disappears quietly. A concrete use: you have shortlisted twenty candidates in Munich from a job board and hold their profile links, so you run them through the API in one batch and get each person's role history, tenure, and listed skills in a single table you can sort. The same call powers a Kandidatensuche follow-up step, enriching a German-market shortlist that you built somewhere else. Skills come back exactly as the member typed them, which in practice means German and English mixed in the same list. No email addresses or phone numbers are returned, because profiles do not publish them.
+The Xing API takes exactly one input, `profileUrls`, an array of up to 1000 member profile URLs or bare handles per run. Every collected entry returns a row whose `result_type` is `profile`, carrying the fields that member published, drawn from `fullName`, `jobTitle`, `city`, `countryCode`, `membership`, `skills`, `languages`, `experience`, `education`, `groups`, and `interests`, plus a one-line `summary` an agent can read without post-processing. An input that cannot be collected returns a row with `result_type` of `error` and a plain-language `error_message`, so nothing disappears quietly. A concrete use: you have shortlisted twenty candidates in Munich from a job board and hold their profile links, so you run them through the API in one batch and get each person's role history, tenure, and listed skills in a single table you can sort. The same call powers a Kandidatensuche follow-up step, enriching a German-market shortlist that you built somewhere else. Skills come back exactly as the member typed them, which in practice means German and English mixed in the same list. No email addresses or phone numbers are returned, because profiles do not publish them.
 
 ## Quick Start
 
@@ -176,7 +176,7 @@ That is the whole input. There is no query, city, or skill filter, because the s
 {
   "result_type": "error",
   "sourceUrl": "https://www.xing.com/profile/Not_A_Real_Handle",
-  "error_message": "No profile was returned for this URL.",
+  "error_message": "No profile was returned.",
   "error_type": "CollectionError",
   "fetched_at": "2026-08-07T17:44:47.742034+00:00"
 }
