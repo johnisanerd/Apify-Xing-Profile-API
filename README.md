@@ -186,6 +186,17 @@ That is the whole input. There is no query, city, or skill filter, because the s
 
 Dieser Actor durchsucht Xing nicht. Er liest Profile aus, deren URL oder Handle Sie bereits haben. Der uebliche Ablauf fuer eine Kandidatensuche im DACH-Raum: Sie sammeln Kandidaten in einer Jobboerse, einem ATS oder einer Empfehlungsliste, uebergeben die Profil-URLs hier in einem Lauf und erhalten pro Person aktuellen Job, Werdegang, Ausbildung, Kenntnisse und Sprachen als strukturierte Zeile. Danach filtern Sie das Ergebnis nach `skills`, `city` oder `jobTitle`, ganz wie es Ihr Prozess braucht. Kontaktdaten sind nicht enthalten.
 
+<!-- ask-ai:start -->
+## 🤖 Ask an AI assistant about this Actor
+
+Open a ready-to-send prompt about the Xing Profile API in the AI of your choice:
+
+- 💬 [ChatGPT](https://chatgpt.com/?q=Using%20the%20Xing%20Profile%20API%20on%20Apify%20%28https://apify.com/johnvc/xing-profile-api?fpr=9n7kx3%29%2C%20walk%20me%20through%20this%20use%20case:%20%22Xing%20Profile%20Data%20API:%20Profile%20URLs%20to%20JSON%22.%20Show%20me%20the%20input%20JSON%2C%20the%20output%20fields%2C%20and%20how%20to%20automate%20it%20with%20the%20API%20or%20MCP.)
+- 🧠 [Claude](https://claude.ai/new?q=Using%20the%20Xing%20Profile%20API%20on%20Apify%20%28https://apify.com/johnvc/xing-profile-api?fpr=9n7kx3%29%2C%20walk%20me%20through%20this%20use%20case:%20%22Xing%20Profile%20Data%20API:%20Profile%20URLs%20to%20JSON%22.%20Show%20me%20the%20input%20JSON%2C%20the%20output%20fields%2C%20and%20how%20to%20automate%20it%20with%20the%20API%20or%20MCP.)
+- 🔍 [Perplexity](https://www.perplexity.ai/search?q=Using%20the%20Xing%20Profile%20API%20on%20Apify%20%28https://apify.com/johnvc/xing-profile-api?fpr=9n7kx3%29%2C%20walk%20me%20through%20this%20use%20case:%20%22Xing%20Profile%20Data%20API:%20Profile%20URLs%20to%20JSON%22.%20Show%20me%20the%20input%20JSON%2C%20the%20output%20fields%2C%20and%20how%20to%20automate%20it%20with%20the%20API%20or%20MCP.)
+- 🅒 [Copilot](https://copilot.microsoft.com/?q=Using%20the%20Xing%20Profile%20API%20on%20Apify%20%28https://apify.com/johnvc/xing-profile-api?fpr=9n7kx3%29%2C%20walk%20me%20through%20this%20use%20case:%20%22Xing%20Profile%20Data%20API:%20Profile%20URLs%20to%20JSON%22.%20Show%20me%20the%20input%20JSON%2C%20the%20output%20fields%2C%20and%20how%20to%20automate%20it%20with%20the%20API%20or%20MCP.)
+<!-- ask-ai:end -->
+
 ## People also search for
 
 ### Is this a Xing scraper or an API?
