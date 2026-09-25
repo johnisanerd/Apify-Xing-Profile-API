@@ -394,4 +394,4 @@ For support or requests for this actor, please start a ticket [directly on our s
 
 *Use the Xing API to power your DACH talent and market research workflows with reliable, structured results.*
 
-Last Updated: 2026.09.22
+Last Updated: 2026.09.25
